@@ -19,7 +19,7 @@ st.set_page_config(
 )
 
 
-st.title(":red[Zomato|]Feeds :pizza:")
+st.title(":red[Phanindra|]Feeds :pizza:")
 
 
 # Injecting Custom CSS
