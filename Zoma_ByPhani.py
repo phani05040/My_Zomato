@@ -1,3 +1,31 @@
+import streamlit as st
+import time
+import pandas as pd
+import plotly.express as px
+import re
+
+
+# Step -1: Page_setup with CSS
+st.set_page_config(
+    page_title="MyFeeds@ZOMATO.com",
+    page_icon=":postbox:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# Zomato Feedback Analysis Tool"
+    }
+)
+
+
+st.title(":red[Zomato|]Feeds :pizza:")
+
+
+# Injecting Custom CSS
+st.markdown('''
+            <style>  
+                .stApp {
                     background-color: ivory;
                     color: #2e7d32;
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -178,3 +206,5 @@ elif option == "Analytics":
                     <div style="text-align: right; font-size: 10px; color: #777;">{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(row['time']))}</div>
                 </div>
             ''', unsafe_allow_html=True)
+
+
